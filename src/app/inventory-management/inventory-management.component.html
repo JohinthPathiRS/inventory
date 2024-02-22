@@ -1,0 +1,24 @@
+
+
+<form [formGroup]="inventoryForm" (ngSubmit)="submitForm()">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" formControlName="productName">
+  
+    <label for="productCategory">Product Category:</label>
+    <input type="text" id="productCategory" formControlName="productCategory">
+  
+    <label for="isDamaged">Is Damaged:</label>
+    <input type="checkbox" id="isDamaged" formControlName="isDamaged">
+  
+    <label for="isPerishable">Is Perishable:</label>
+    <input type="checkbox" id="isPerishable" formControlName="isPerishable">
+  
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="date" id="expiryDate" formControlName="expiryDate">
+  
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" formControlName="quantity" min="0">
+  
+    <button type="submit" [disabled]="inventoryForm.invalid">Add Inventory</button>
+  </form>
+  
